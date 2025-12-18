@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Award, CheckCircle2, X } from "lucide-react";
+import { Award, CheckCircle2, X, Cloud, Cpu, Brain, Zap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import professionalCert from "@assets/professional_cert_1766084442456.png";
 import aiFoundationsBadge from "@assets/badge1_1766084442451.png";
@@ -18,7 +18,10 @@ const certs = [
     validity: "Valid until July 29, 2026",
     certificate: professionalCert,
     badge: genAiBadge,
-    icon: "🤖",
+    icon: Brain,
+    iconColor: "text-orange-500",
+    bgColor: "bg-gradient-to-br from-orange-500/10 to-orange-600/5",
+    borderColor: "border-orange-500/30",
     category: "AI & Machine Learning"
   },
   {
@@ -28,7 +31,10 @@ const certs = [
     validity: "Valid until December 02, 2027",
     certificate: aiFoundationsCert,
     badge: aiFoundationsBadge,
-    icon: "🧠",
+    icon: Cpu,
+    iconColor: "text-blue-500",
+    bgColor: "bg-gradient-to-br from-blue-500/10 to-blue-600/5",
+    borderColor: "border-blue-500/30",
     category: "AI Foundations"
   },
   {
@@ -38,7 +44,10 @@ const certs = [
     validity: "Valid until December 02, 2027",
     certificate: foundationsCert,
     badge: foundationsBadge,
-    icon: "☁️",
+    icon: Cloud,
+    iconColor: "text-cyan-500",
+    bgColor: "bg-gradient-to-br from-cyan-500/10 to-cyan-600/5",
+    borderColor: "border-cyan-500/30",
     category: "Cloud Infrastructure"
   },
   {
@@ -47,17 +56,12 @@ const certs = [
     date: "June 6, 2024",
     validity: "Active",
     certificate: awsCert,
-    icon: "🟠",
+    icon: Zap,
+    iconColor: "text-yellow-500",
+    bgColor: "bg-gradient-to-br from-yellow-500/10 to-yellow-600/5",
+    borderColor: "border-yellow-500/30",
     category: "Cloud Services"
   }
-];
-
-// For the card preview images - using placeholder approach
-const cardImages = [
-  "https://images.unsplash.com/photo-1639149888905-c37553f337d4?q=80&w=400&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1633356122544-f134324ef6db?q=80&w=400&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1633356122544-f134324ef6db?q=80&w=400&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1599669157969-40da08a5f566?q=80&w=400&auto=format&fit=crop"
 ];
 
 export default function Certifications() {
@@ -75,54 +79,60 @@ export default function Certifications() {
 
         {/* Detailed Certificates */}
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {certs.map((cert, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.1 }}
-              onClick={() => setSelectedCert(idx)}
-              className="glass-card p-6 rounded-xl border-t-2 border-primary hover:border-secondary transition-colors group cursor-pointer hover:shadow-lg hover:shadow-secondary/20"
-            >
-              <div className="flex items-start gap-4 mb-4">
-                <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-secondary/10 transition-colors flex-shrink-0">
-                  <Award className="text-primary group-hover:text-secondary transition-colors" size={28} />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-bold text-lg leading-tight mb-1 group-hover:text-primary transition-colors break-words">
-                    {cert.title}
-                  </h3>
-                  <div className="flex items-center gap-2 mb-2">
-                    <p className="text-sm text-secondary font-tech font-semibold">{cert.issuer}</p>
-                    <Badge variant="outline" className="text-xs border-secondary/50 text-secondary">
-                      {cert.category}
-                    </Badge>
+          {certs.map((cert, idx) => {
+            const IconComponent = cert.icon;
+            return (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.1 }}
+                onClick={() => setSelectedCert(idx)}
+                className={`glass-card p-6 rounded-xl border-2 ${cert.borderColor} ${cert.bgColor} hover:border-secondary transition-all group cursor-pointer hover:shadow-lg hover:shadow-secondary/20`}
+              >
+                {/* Header with Icon and Title */}
+                <div className="flex items-start gap-4 mb-6">
+                  <div className={`p-4 rounded-lg ${cert.bgColor} border-2 ${cert.borderColor} group-hover:scale-110 transition-transform flex-shrink-0`}>
+                    <IconComponent className={`${cert.iconColor} group-hover:text-secondary transition-colors`} size={40} strokeWidth={1.5} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors break-words">
+                      {cert.title}
+                    </h3>
+                    <div className="flex items-center gap-2">
+                      <p className="text-sm text-secondary font-tech font-semibold">{cert.issuer}</p>
+                      <Badge variant="outline" className={`text-xs ${cert.borderColor} text-secondary border-current`}>
+                        {cert.category}
+                      </Badge>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="mb-4 rounded-lg overflow-hidden h-40 bg-black/20 border border-white/5 hover:border-secondary/50 transition-colors">
-                <img src={cardImages[idx]} alt={cert.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-              </div>
+                {/* Visual Divider with gradient */}
+                <div className={`h-1 mb-4 rounded-full bg-gradient-to-r ${cert.iconColor.replace('text-', 'from-')} to-secondary opacity-30`}></div>
 
-              <div className="space-y-2 text-sm">
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <span>📅</span>
-                  <span className="text-white">{cert.date}</span>
+                {/* Metadata */}
+                <div className="space-y-2 text-sm">
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <span>📅</span>
+                    <span className="text-white">{cert.date}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className={cert.validity.includes("Active") ? "text-green-400" : "text-blue-400"} />
+                    <span className={cert.validity.includes("Active") ? "text-green-400" : "text-blue-400"}>
+                      {cert.validity}
+                    </span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className={cert.validity.includes("Active") ? "text-green-400" : "text-blue-400"} />
-                  <span className={cert.validity.includes("Active") ? "text-green-400" : "text-blue-400"}>
-                    {cert.validity}
-                  </span>
-                </div>
-              </div>
 
-              <div className="mt-4 text-sm text-secondary font-tech">
-                Click to view details →
-              </div>
-            </motion.div>
-          ))}
+                {/* CTA */}
+                <div className="mt-4 pt-4 border-t border-white/10 text-sm text-secondary font-tech group-hover:text-primary transition-colors flex items-center gap-2">
+                  <Award size={16} />
+                  Click to view details
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* Modal */}
@@ -144,9 +154,19 @@ export default function Certifications() {
               >
                 <div className="bg-background border-2 border-secondary rounded-xl p-6">
                   <div className="flex justify-between items-center mb-6">
-                    <h3 className="text-2xl font-display font-bold text-secondary">
-                      {certs[selectedCert].title}
-                    </h3>
+                    <div className="flex items-center gap-4">
+                      {(() => {
+                        const IconComponent = certs[selectedCert].icon;
+                        return (
+                          <div className={`p-3 rounded-lg ${certs[selectedCert].bgColor} border-2 ${certs[selectedCert].borderColor}`}>
+                            <IconComponent className={`${certs[selectedCert].iconColor}`} size={32} strokeWidth={1.5} />
+                          </div>
+                        );
+                      })()}
+                      <h3 className="text-2xl font-display font-bold text-secondary">
+                        {certs[selectedCert].title}
+                      </h3>
+                    </div>
                     <button
                       onClick={() => setSelectedCert(null)}
                       className="p-2 hover:bg-white/10 rounded-lg transition-colors flex-shrink-0"
@@ -158,7 +178,10 @@ export default function Certifications() {
                   <div className="space-y-6">
                     {/* Certificate */}
                     <div>
-                      <p className="text-sm text-secondary font-tech font-semibold mb-3">Certificate</p>
+                      <p className="text-sm text-secondary font-tech font-semibold mb-3 flex items-center gap-2">
+                        <Award size={16} />
+                        Certificate
+                      </p>
                       <div className="rounded-lg overflow-hidden border border-white/10 bg-black/20">
                         <img
                           src={certs[selectedCert].certificate}
@@ -171,7 +194,10 @@ export default function Certifications() {
                     {/* Badge - Only show for Oracle certs (indices 0, 1, 2) */}
                     {selectedCert < 3 && certs[selectedCert].badge && (
                       <div>
-                        <p className="text-sm text-secondary font-tech font-semibold mb-3">Digital Badge</p>
+                        <p className="text-sm text-secondary font-tech font-semibold mb-3 flex items-center gap-2">
+                          <Zap size={16} />
+                          Digital Badge
+                        </p>
                         <div className="rounded-lg overflow-hidden border border-white/10 bg-black/20">
                           <img
                             src={certs[selectedCert].badge}
