@@ -4,6 +4,7 @@ import ScrollTop from "@/components/ScrollTop";
 import FloatingWidget from "@/components/FloatingWidget";
 import PageTransition from "@/components/PageTransition";
 import Hero from "@/components/Hero";
+import ProfileSection from "@/components/ProfileSection";
 import Stats from "@/components/Stats";
 import Highlights from "@/components/Highlights";
 import SkillAccordion from "@/components/SkillAccordion";
@@ -28,6 +29,8 @@ export default function Home() {
           <div id="hero" className="pt-16">
             <Hero />
           </div>
+          
+          <ProfileSection />
           
           <Stats />
           <Highlights />
