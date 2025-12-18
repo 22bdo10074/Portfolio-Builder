@@ -1,7 +1,7 @@
 import { Code2, Cloud, Terminal, Monitor, Server, Cpu, Globe, Layout, Shield, Database, Users, Lightbulb, Puzzle, Clock, MessageSquare, RefreshCw } from "lucide-react";
 
 // Import assets to ensure they are bundled and have correct URLs
-import profileImg from "@assets/professional_img_1766074365011.jpg";
+import profileImg from "@assets/Professional_img.jpg";
 import devopsResume from "@assets/Devops_eng_1766074393799.pdf";
 import cloudResume from "@assets/cloud_eng_1766074393798.pdf";
 import sdeResume from "@assets/SDE_1766074365011.pdf";
