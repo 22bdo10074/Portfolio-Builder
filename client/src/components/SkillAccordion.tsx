@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { skillsData, profile } from "@/lib/data";
-import { ChevronDown, Download, Mail, Phone } from "lucide-react";
+import { ChevronDown, Download, Mail, Phone, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
