@@ -38,8 +38,7 @@ const certs = [
     iconColor: "text-blue-500",
     bgColor: "bg-gradient-to-br from-blue-500/10 to-blue-600/5",
     borderColor: "border-blue-500/30",
-    category: "AI Foundations",
-    hasProfile: true
+    category: "AI Foundations"
   },
   {
     title: "Oracle Cloud Infrastructure 2025 Certified Foundations Associate",
@@ -94,28 +93,13 @@ export default function Certifications() {
                 onClick={() => setSelectedCert(idx)}
                 className={`glass-card p-6 rounded-xl border-2 ${cert.borderColor} ${cert.bgColor} hover:border-secondary transition-all group cursor-pointer hover:shadow-lg hover:shadow-secondary/20 relative overflow-hidden`}
               >
-                {/* Profile Avatar for second card */}
-                {cert.hasProfile && (
-                  <div className="absolute top-4 right-4 z-10">
-                    <motion.div
-                      whileHover={{ scale: 1.1 }}
-                      className="relative"
-                    >
-                      <Avatar className="h-20 w-20 border-2 border-secondary ring-2 ring-secondary/50">
-                        <AvatarImage src={profileImg} alt="Profile" className="object-cover" />
-                        <AvatarFallback>SK</AvatarFallback>
-                      </Avatar>
-                      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    </motion.div>
-                  </div>
-                )}
 
                 {/* Header with Icon and Title */}
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`p-4 rounded-lg ${cert.bgColor} border-2 ${cert.borderColor} group-hover:scale-110 transition-transform flex-shrink-0`}>
                     <IconComponent className={`${cert.iconColor} group-hover:text-secondary transition-colors`} size={40} strokeWidth={1.5} />
                   </div>
-                  <div className="flex-1 min-w-0 pr-24">
+                  <div className="flex-1 min-w-0">
                     <h3 className="font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors break-words">
                       {cert.title}
                     </h3>
