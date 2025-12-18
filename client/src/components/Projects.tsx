@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink } from 'lucide-react';
+import devopsQuestImg from '@assets/DevopsQuest_logo_1766078919842.jpg';
 
 const projects = [
   {
@@ -10,7 +11,7 @@ const projects = [
     role: 'Lead Developer',
     description: 'A Gamified Learning Platform for Progressive DevOps Education. Users solve quests to learn Docker, K8s, and CI/CD concepts.',
     tech: ['React', 'Node.js', 'MongoDB', 'Docker', 'Kubernetes'],
-    image: 'https://images.unsplash.com/photo-1667372393119-c81c0c063682?q=80&w=1000&auto=format&fit=crop'
+    image: devopsQuestImg
   },
   {
     category: 'Frontend',
@@ -32,7 +33,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-background to-black/40">
+    <section className="py-20 px-4 bg-gradient-to-b from-black/40 to-background">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-5xl font-display font-bold mb-16 text-center neon-text">
           Featured Projects
