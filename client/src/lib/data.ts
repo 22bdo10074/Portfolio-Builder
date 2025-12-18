@@ -2,11 +2,11 @@ import { Code2, Cloud, Terminal, Monitor, Server, Cpu, Globe, Layout, Shield, Da
 
 // Import assets to ensure they are bundled and have correct URLs
 import profileImg from "@assets/Professional_img.jpg";
-import devopsResume from "@assets/Sandhya_DevOps_Engineer.pdf";
-import cloudResume from "@assets/Sandhya_Cloud_Engineer.pdf";
-import sdeResume from "@assets/Sandhya_Software_Developer.pdf";
-import sreResume from "@assets/Sandhya_Site_Reliability_Engineer.pdf";
-import frontendResume from "@assets/Sandhya_Frontend_Developer.pdf";
+import Sandhya_DevOps_Engineer from "@assets/Sandhya_DevOps_Engineer.pdf";
+import Sandhya_Cloud_Engineer from "@assets/Sandhya_Cloud_Engineer.pdf";
+import Sandhya_Software_Developer from "@assets/Sandhya_Software_Developer.pdf";
+import Sandhya_Site_Reliability_Engineer from "@assets/Sandhya_Site_Reliability_Engineer.pdf";
+import Sandhya_Frontend_Developer from "@assets/Sandhya_Frontend_Developer.pdf";
 
 export const profile = {
   name: "Sandhya Kumari",
