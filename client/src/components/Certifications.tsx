@@ -2,6 +2,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Award, CheckCircle2, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import professionalCert from "@assets/professional_cert_1766084442456.png";
+import aiFoundationsBadge from "@assets/badge1_1766084442451.png";
+import aiFoundationsCert from "@assets/Associate_ai_cert_1766084442448.png";
+import foundationsBadge from "@assets/badge2_1766084442453.png";
+import foundationsCert from "@assets/Associate_cert_1766084442448.png";
+import genAiBadge from "@assets/badge3_1766084442454.png";
+import awsCert from "@assets/aws_cert_1766084442449.png";
 
 const certs = [
   {
@@ -9,9 +16,8 @@ const certs = [
     issuer: "Oracle",
     date: "July 29, 2024",
     validity: "Valid until July 29, 2026",
-    image: "/attached_assets/Screenshot_2025-12-18_212835_1766080315641.png",
-    certificate: "/attached_assets/professional_cert_1766084442456.png",
-    badge: "/attached_assets/badge3_1766084442454.png",
+    certificate: professionalCert,
+    badge: genAiBadge,
     icon: "🤖",
     category: "AI & Machine Learning"
   },
@@ -20,9 +26,8 @@ const certs = [
     issuer: "Oracle",
     date: "December 02, 2025",
     validity: "Valid until December 02, 2027",
-    image: "/attached_assets/Screenshot_2025-12-18_212556_1766080315638.png",
-    certificate: "/attached_assets/Associate_ai_cert_1766084442448.png",
-    badge: "/attached_assets/badge1_1766084442451.png",
+    certificate: aiFoundationsCert,
+    badge: aiFoundationsBadge,
     icon: "🧠",
     category: "AI Foundations"
   },
@@ -31,9 +36,8 @@ const certs = [
     issuer: "Oracle",
     date: "December 02, 2025",
     validity: "Valid until December 02, 2027",
-    image: "/attached_assets/Screenshot_2025-12-18_212732_1766080315639.png",
-    certificate: "/attached_assets/Associate_cert_1766084442448.png",
-    badge: "/attached_assets/badge2_1766084442453.png",
+    certificate: foundationsCert,
+    badge: foundationsBadge,
     icon: "☁️",
     category: "Cloud Infrastructure"
   },
@@ -42,10 +46,18 @@ const certs = [
     issuer: "AWS",
     date: "June 6, 2024",
     validity: "Active",
-    certificate: "/attached_assets/aws_cert_1766084442449.png",
+    certificate: awsCert,
     icon: "🟠",
     category: "Cloud Services"
   }
+];
+
+// For the card preview images - using placeholder approach
+const cardImages = [
+  "https://images.unsplash.com/photo-1639149888905-c37553f337d4?q=80&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1633356122544-f134324ef6db?q=80&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1633356122544-f134324ef6db?q=80&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1599669157969-40da08a5f566?q=80&w=400&auto=format&fit=crop"
 ];
 
 export default function Certifications() {
@@ -89,11 +101,9 @@ export default function Certifications() {
                 </div>
               </div>
 
-              {cert.image && (
-                <div className="mb-4 rounded-lg overflow-hidden h-40 bg-black/20 border border-white/5 hover:border-secondary/50 transition-colors">
-                  <img src={cert.image} alt={cert.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                </div>
-              )}
+              <div className="mb-4 rounded-lg overflow-hidden h-40 bg-black/20 border border-white/5 hover:border-secondary/50 transition-colors">
+                <img src={cardImages[idx]} alt={cert.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              </div>
 
               <div className="space-y-2 text-sm">
                 <div className="flex items-center gap-2 text-muted-foreground">
@@ -139,7 +149,7 @@ export default function Certifications() {
                     </h3>
                     <button
                       onClick={() => setSelectedCert(null)}
-                      className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+                      className="p-2 hover:bg-white/10 rounded-lg transition-colors flex-shrink-0"
                     >
                       <X size={24} />
                     </button>
