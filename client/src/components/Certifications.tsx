@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
-import { Award, ExternalLink, CheckCircle2 } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { Award, CheckCircle2, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const certs = [
@@ -9,6 +10,8 @@ const certs = [
     date: "July 29, 2024",
     validity: "Valid until July 29, 2026",
     image: "/attached_assets/Screenshot_2025-12-18_212835_1766080315641.png",
+    certificate: "/attached_assets/professional_cert_1766083116410.png",
+    badge: "/attached_assets/badge3_1766083116410.png",
     icon: "🤖",
     category: "AI & Machine Learning"
   },
@@ -18,6 +21,8 @@ const certs = [
     date: "December 02, 2025",
     validity: "Valid until December 02, 2027",
     image: "/attached_assets/Screenshot_2025-12-18_212556_1766080315638.png",
+    certificate: "/attached_assets/Associate_ai_cert_1766083116407.png",
+    badge: "/attached_assets/badge1_1766083116409.png",
     icon: "🧠",
     category: "AI Foundations"
   },
@@ -27,6 +32,8 @@ const certs = [
     date: "December 02, 2025",
     validity: "Valid until December 02, 2027",
     image: "/attached_assets/Screenshot_2025-12-18_212732_1766080315639.png",
+    certificate: "/attached_assets/Associate_cert_1766083116408.png",
+    badge: "/attached_assets/badge2_1766083116409.png",
     icon: "☁️",
     category: "Cloud Infrastructure"
   },
@@ -35,12 +42,15 @@ const certs = [
     issuer: "AWS",
     date: "June 6, 2024",
     validity: "Active",
+    certificate: "/attached_assets/aws_cert_1766083116409.png",
     icon: "🟠",
     category: "Cloud Services"
   }
 ];
 
 export default function Certifications() {
+  const [selectedCert, setSelectedCert] = useState<number | null>(null);
+
   return (
     <section className="py-20 px-4 bg-black/40">
       <div className="container mx-auto">
@@ -59,7 +69,8 @@ export default function Certifications() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
-              className="glass-card p-6 rounded-xl border-t-2 border-primary hover:border-secondary transition-colors group"
+              onClick={() => setSelectedCert(idx)}
+              className="glass-card p-6 rounded-xl border-t-2 border-primary hover:border-secondary transition-colors group cursor-pointer hover:shadow-lg hover:shadow-secondary/20"
             >
               <div className="flex items-start gap-4 mb-4">
                 <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-secondary/10 transition-colors flex-shrink-0">
@@ -96,9 +107,82 @@ export default function Certifications() {
                   </span>
                 </div>
               </div>
+
+              <div className="mt-4 text-sm text-secondary font-tech">
+                Click to view details →
+              </div>
             </motion.div>
           ))}
         </div>
+
+        {/* Modal */}
+        <AnimatePresence>
+          {selectedCert !== null && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedCert(null)}
+              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            >
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                onClick={(e) => e.stopPropagation()}
+                className="max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+              >
+                <div className="bg-background border-2 border-secondary rounded-xl p-6">
+                  <div className="flex justify-between items-center mb-6">
+                    <h3 className="text-2xl font-display font-bold text-secondary">
+                      {certs[selectedCert].title}
+                    </h3>
+                    <button
+                      onClick={() => setSelectedCert(null)}
+                      className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+                    >
+                      <X size={24} />
+                    </button>
+                  </div>
+
+                  <div className="space-y-6">
+                    {/* Certificate */}
+                    <div>
+                      <p className="text-sm text-secondary font-tech font-semibold mb-3">Certificate</p>
+                      <div className="rounded-lg overflow-hidden border border-white/10 bg-black/20">
+                        <img
+                          src={certs[selectedCert].certificate}
+                          alt="Certificate"
+                          className="w-full h-auto"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Badge - Only show for Oracle certs (indices 0, 1, 2) */}
+                    {selectedCert < 3 && certs[selectedCert].badge && (
+                      <div>
+                        <p className="text-sm text-secondary font-tech font-semibold mb-3">Digital Badge</p>
+                        <div className="rounded-lg overflow-hidden border border-white/10 bg-black/20">
+                          <img
+                            src={certs[selectedCert].badge}
+                            alt="Badge"
+                            className="w-full h-auto"
+                          />
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="mt-6 pt-6 border-t border-white/10">
+                    <p className="text-xs text-muted-foreground">
+                      Click outside to close
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
