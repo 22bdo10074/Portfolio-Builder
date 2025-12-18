@@ -10,7 +10,7 @@ import foundationsBadge from "@assets/badge2_1766084442453.png";
 import foundationsCert from "@assets/Associate_cert_1766084442448.png";
 import genAiBadge from "@assets/badge3_1766084442454.png";
 import awsCert from "@assets/aws_cert_1766084442449.png";
-import profileImg from "@assets/Professional_img_1766085490399.jpg";
+import profileImg from "@assets/Professional_img.jpg";
 
 const certs = [
   {
