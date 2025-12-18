@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { profile } from "@/lib/data";
-import { Mail, Phone, MapPin, Linkedin, Github, Send } from "lucide-react";
+import { Mail, Phone, Linkedin, Github, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Contact() {
@@ -20,7 +20,7 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-12">
+        <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-12">
           {/* Email */}
           <motion.a
             href={`mailto:${profile.email}`}
@@ -46,18 +46,6 @@ export default function Contact() {
             <h3 className="font-display font-bold text-lg mb-2">Phone</h3>
             <p className="text-muted-foreground text-sm">{profile.phone}</p>
           </motion.a>
-
-          {/* Location */}
-          <motion.div
-            whileHover={{ y: -5 }}
-            className="glass-card p-8 rounded-xl text-center hover:border-primary transition-all group"
-          >
-            <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-              <MapPin className="text-primary group-hover:scale-110 transition-transform" size={32} />
-            </div>
-            <h3 className="font-display font-bold text-lg mb-2">Location</h3>
-            <p className="text-muted-foreground text-sm">{profile.location}</p>
-          </motion.div>
         </div>
 
         {/* Social Links */}

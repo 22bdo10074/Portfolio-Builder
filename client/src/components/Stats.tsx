@@ -3,9 +3,7 @@ import { useState, useEffect } from "react";
 
 const stats = [
   { label: "Projects Built", value: 3, suffix: "+" },
-  { label: "Certifications", value: 4, suffix: "" },
-  { label: "Years Coding", value: 3, suffix: "+" },
-  { label: "Specializations", value: 5, suffix: "" }
+  { label: "Certifications", value: 4, suffix: "" }
 ];
 
 const Counter = ({ value, suffix }: { value: number; suffix: string }) => {
@@ -41,7 +39,7 @@ export default function Stats() {
   return (
     <section className="py-16 px-4 bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 border-y border-white/5">
       <div className="container mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
           {stats.map((stat, idx) => (
             <motion.div
               key={idx}
