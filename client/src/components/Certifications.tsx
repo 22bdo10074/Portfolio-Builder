@@ -10,8 +10,8 @@ const certs = [
     date: "July 29, 2024",
     validity: "Valid until July 29, 2026",
     image: "/attached_assets/Screenshot_2025-12-18_212835_1766080315641.png",
-    certificate: "/attached_assets/professional_cert_1766083116410.png",
-    badge: "/attached_assets/badge3_1766083116410.png",
+    certificate: "/attached_assets/professional_cert_1766084442456.png",
+    badge: "/attached_assets/badge3_1766084442454.png",
     icon: "🤖",
     category: "AI & Machine Learning"
   },
@@ -21,8 +21,8 @@ const certs = [
     date: "December 02, 2025",
     validity: "Valid until December 02, 2027",
     image: "/attached_assets/Screenshot_2025-12-18_212556_1766080315638.png",
-    certificate: "/attached_assets/Associate_ai_cert_1766083116407.png",
-    badge: "/attached_assets/badge1_1766083116409.png",
+    certificate: "/attached_assets/Associate_ai_cert_1766084442448.png",
+    badge: "/attached_assets/badge1_1766084442451.png",
     icon: "🧠",
     category: "AI Foundations"
   },
@@ -32,8 +32,8 @@ const certs = [
     date: "December 02, 2025",
     validity: "Valid until December 02, 2027",
     image: "/attached_assets/Screenshot_2025-12-18_212732_1766080315639.png",
-    certificate: "/attached_assets/Associate_cert_1766083116408.png",
-    badge: "/attached_assets/badge2_1766083116409.png",
+    certificate: "/attached_assets/Associate_cert_1766084442448.png",
+    badge: "/attached_assets/badge2_1766084442453.png",
     icon: "☁️",
     category: "Cloud Infrastructure"
   },
@@ -42,7 +42,7 @@ const certs = [
     issuer: "AWS",
     date: "June 6, 2024",
     validity: "Active",
-    certificate: "/attached_assets/aws_cert_1766083116409.png",
+    certificate: "/attached_assets/aws_cert_1766084442449.png",
     icon: "🟠",
     category: "Cloud Services"
   }
