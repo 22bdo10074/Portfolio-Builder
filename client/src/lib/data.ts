@@ -17,7 +17,6 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/sandhya-53949825a/",
   github: "https://github.com/22bdo10074",
   image: profileImg,
-  resume: sdeResume,
   about: "I'm a passionate DevOps Engineer, Cloud Engineer, SDE, SRE, and Front-end developer. I build scalable systems and beautiful interfaces.",
   quote: "Turning coffee into code and chaos into reliable infrastructure."
 };
