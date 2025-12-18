@@ -58,6 +58,7 @@ export const skillsData = [
     icon: Cloud,
     description: "Architecting scalable cloud solutions on AWS & Azure.",
     keySkills: ["AWS (EC2, S3, VPC, RDS, EKS)", "Azure", "Google Cloud Concepts", "Terraform", "CloudFormation", "Ansible", "Configuration Management", "VPC Design", "Subnets", "Security Groups", "IAM Roles", "Load Balancing (ELB/ALB)", "Docker", "Kubernetes", "Jenkins", "CI/CD Pipelines", "Git", "CloudWatch", "Prometheus", "Grafana", "Linux Administration (Ubuntu/RHEL)"],
+    projects: [],
     certs: ["AWS Cloud Practitioner Essentials", "Oracle Cloud Infrastructure Foundations Associate"],
     resumeLink: sce
   },
@@ -83,6 +84,8 @@ export const skillsData = [
     icon: Server,
     description: "Ensuring system reliability, monitoring, and security.",
     keySkills: ["Site Reliability Engineering", "Observability", "Incident Management", "Capacity Planning", "Toil Reduction", "Prometheus", "Grafana", "ELK Stack (Logstash, Kibana)", "CloudWatch", "AlertManager", "AWS (EC2, EKS, S3)", "Terraform (IaC)", "Docker", "Kubernetes", "Ansible", "Python", "Bash/Shell", "Go (Basic)", "Java", "SQL", "Jenkins", "Git/GitHub", "Linux Administration", "Automated Deployment Pipelines"],
+    projects: [],
+    certs: [],
     resumeLink: ssre
   },
   {
@@ -91,6 +94,8 @@ export const skillsData = [
     icon: Layout,
     description: "Crafting responsive and interactive user interfaces.",
     keySkills: ["React.js","Next.js","JavaScript (ES6+)", "HTML5", "CSS3", "TypeScript", "Tailwind CSS", "SCSS/SASS", "Bootstrap", "Flexbox/Grid", "UI/UX Design", "Framer Motion", "Responsive Design", "Redux Toolkit", "Context API", "RESTful API Integration", "JSON", "Axios", "Fetch API", "Git/GitHub", "VS Code", "Chrome DevTools", "Postman", "Figma (Collaboration)", "Jest (Basic)"],
+    projects: [],
+    certs: [],
     resumeLink: sfd
   }
 ];
