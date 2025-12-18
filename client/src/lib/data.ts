@@ -1,4 +1,4 @@
-import { Code2, Cloud, Terminal, Monitor, Server, Cpu, Globe, Layout, Shield, Database, Users, Lightbulb, Puzzle, Clock, MessageSquare } from "lucide-react";
+import { Code2, Cloud, Terminal, Monitor, Server, Cpu, Globe, Layout, Shield, Database, Users, Lightbulb, Puzzle, Clock, MessageSquare, RefreshCw } from "lucide-react";
 
 // Import assets to ensure they are bundled and have correct URLs
 import profileImg from "@assets/professional_img_1766074365011.jpg";
@@ -17,7 +17,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/sandhya-53949825a/",
   github: "https://github.com/22bdo10074",
   image: profileImg,
-  resume: sdeResume, // Using SDE resume as main default
+  resume: sdeResume,
   about: "I'm a passionate DevOps Engineer, Cloud Engineer, SDE, SRE, and Front-end developer. I build scalable systems and beautiful interfaces.",
   quote: "Turning coffee into code and chaos into reliable infrastructure."
 };
@@ -135,6 +135,11 @@ export const interpersonalSkills = [
     title: "Critical Thinking",
     icon: Lightbulb,
     desc: "Analyzed security architecture and threat mitigation strategies for research papers."
+  },
+  {
+    title: "Adaptability",
+    icon: RefreshCw,
+    desc: "Quickly adapted to new technologies, frameworks, and project requirements across diverse roles and domains."
   }
 ];
 
