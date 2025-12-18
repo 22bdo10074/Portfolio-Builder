@@ -10,7 +10,6 @@ import SkillAccordion from "@/components/SkillAccordion";
 import FlashCards from "@/components/FlashCards";
 import Certifications from "@/components/Certifications";
 import CodingProfiles from "@/components/CodingProfiles";
-import QuickAccess from "@/components/QuickAccess";
 import Education from "@/components/Education";
 import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
@@ -47,8 +46,6 @@ export default function Home() {
           <div id="coding-profiles">
             <CodingProfiles />
           </div>
-          
-          <QuickAccess />
           
           <div id="education">
             <Education />
