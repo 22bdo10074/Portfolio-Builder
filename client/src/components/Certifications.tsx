@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Award, CheckCircle2, X, Cloud, Cpu, Brain, Zap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import professionalCert from "@assets/professional_cert_1766084442456.png";
 import aiFoundationsBadge from "@assets/badge1_1766084442451.png";
 import aiFoundationsCert from "@assets/Associate_ai_cert_1766084442448.png";
@@ -9,6 +10,7 @@ import foundationsBadge from "@assets/badge2_1766084442453.png";
 import foundationsCert from "@assets/Associate_cert_1766084442448.png";
 import genAiBadge from "@assets/badge3_1766084442454.png";
 import awsCert from "@assets/aws_cert_1766084442449.png";
+import profileImg from "@assets/Professional_img_1766085490399.jpg";
 
 const certs = [
   {
@@ -35,7 +37,8 @@ const certs = [
     iconColor: "text-blue-500",
     bgColor: "bg-gradient-to-br from-blue-500/10 to-blue-600/5",
     borderColor: "border-blue-500/30",
-    category: "AI Foundations"
+    category: "AI Foundations",
+    hasProfile: true
   },
   {
     title: "Oracle Cloud Infrastructure 2025 Certified Foundations Associate",
@@ -88,14 +91,30 @@ export default function Certifications() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.1 }}
                 onClick={() => setSelectedCert(idx)}
-                className={`glass-card p-6 rounded-xl border-2 ${cert.borderColor} ${cert.bgColor} hover:border-secondary transition-all group cursor-pointer hover:shadow-lg hover:shadow-secondary/20`}
+                className={`glass-card p-6 rounded-xl border-2 ${cert.borderColor} ${cert.bgColor} hover:border-secondary transition-all group cursor-pointer hover:shadow-lg hover:shadow-secondary/20 relative overflow-hidden`}
               >
+                {/* Profile Avatar for second card */}
+                {cert.hasProfile && (
+                  <div className="absolute top-4 right-4 z-10">
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      className="relative"
+                    >
+                      <Avatar className="h-20 w-20 border-2 border-secondary ring-2 ring-secondary/50">
+                        <AvatarImage src={profileImg} alt="Profile" className="object-cover" />
+                        <AvatarFallback>SK</AvatarFallback>
+                      </Avatar>
+                      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </motion.div>
+                  </div>
+                )}
+
                 {/* Header with Icon and Title */}
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`p-4 rounded-lg ${cert.bgColor} border-2 ${cert.borderColor} group-hover:scale-110 transition-transform flex-shrink-0`}>
                     <IconComponent className={`${cert.iconColor} group-hover:text-secondary transition-colors`} size={40} strokeWidth={1.5} />
                   </div>
-                  <div className="flex-1 min-w-0">
+                  <div className="flex-1 min-w-0 pr-24">
                     <h3 className="font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors break-words">
                       {cert.title}
                     </h3>
