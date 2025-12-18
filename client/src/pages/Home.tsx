@@ -8,10 +8,7 @@ import Stats from "@/components/Stats";
 import Highlights from "@/components/Highlights";
 import SkillAccordion from "@/components/SkillAccordion";
 import FlashCards from "@/components/FlashCards";
-import Timeline from "@/components/Timeline";
 import Certifications from "@/components/Certifications";
-import ResearchPapers from "@/components/ResearchPapers";
-import TechStack from "@/components/TechStack";
 import CodingProfiles from "@/components/CodingProfiles";
 import Projects from "@/components/Projects";
 import Education from "@/components/Education";
@@ -43,20 +40,8 @@ export default function Home() {
             <FlashCards />
           </div>
           
-          <div id="timeline">
-            <Timeline />
-          </div>
-          
           <div id="certifications">
             <Certifications />
-          </div>
-          
-          <div id="research">
-            <ResearchPapers />
-          </div>
-          
-          <div id="tech-stack">
-            <TechStack />
           </div>
           
           <div id="coding-profiles">
