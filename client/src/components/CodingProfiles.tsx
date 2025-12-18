@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Code2 } from "lucide-react";
+import { ExternalLink, Code2, Download } from "lucide-react";
+import { profile } from "@/lib/data";
 
 const profiles = [
   {
@@ -13,6 +14,13 @@ const profiles = [
     url: "https://github.com/22bdo10074",
     icon: "🐙",
     color: "from-gray-700 to-gray-800"
+  },
+  {
+    name: "Resume",
+    url: profile.resume,
+    icon: "📄",
+    color: "from-red-500 to-red-600",
+    download: true
   },
   {
     name: "LeetCode",
@@ -57,13 +65,14 @@ export default function CodingProfiles() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {profiles.map((profile, idx) => (
             <motion.a
               key={profile.name}
               href={profile.url}
               target="_blank"
               rel="noopener noreferrer"
+              download={profile.download}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
@@ -77,9 +86,19 @@ export default function CodingProfiles() {
                 {profile.name}
               </h3>
               <div className="flex items-center gap-2 text-sm text-muted-foreground group-hover:text-white transition-colors">
-                <Code2 size={14} />
-                Visit Profile
-                <ExternalLink size={14} className="ml-auto group-hover:translate-x-1 transition-transform" />
+                {profile.download ? (
+                  <>
+                    <Download size={14} />
+                    Download
+                    <ExternalLink size={14} className="ml-auto group-hover:translate-x-1 transition-transform" />
+                  </>
+                ) : (
+                  <>
+                    <Code2 size={14} />
+                    Visit Profile
+                    <ExternalLink size={14} className="ml-auto group-hover:translate-x-1 transition-transform" />
+                  </>
+                )}
               </div>
             </motion.a>
           ))}

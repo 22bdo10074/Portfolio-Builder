@@ -5,9 +5,12 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   { label: "Home", id: "hero" },
   { label: "Skills", id: "skills" },
-  { label: "About", id: "interpersonal" },
+  { label: "Interpersonal", id: "interpersonal" },
+  { label: "Certifications", id: "certifications" },
+  { label: "Coding Profiles", id: "coding-profiles" },
   { label: "Projects", id: "projects" },
-  { label: "Education", id: "education" }
+  { label: "Education", id: "education" },
+  { label: "Connect", id: "connect" }
 ];
 
 export default function Navbar() {
@@ -26,7 +29,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         
         {/* Logo */}
-        <div className="font-display font-bold text-xl neon-text">SK</div>
+        <div className="font-display font-bold text-xl neon-text cursor-pointer" onClick={() => scrollToSection("hero")}>SK</div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8">

@@ -57,7 +57,10 @@ export default function Home() {
           </div>
           
           <CTA />
-          <Contact />
+          
+          <div id="connect">
+            <Contact />
+          </div>
           
           <footer className="py-8 text-center text-muted-foreground border-t border-white/5 bg-black/40">
             <p className="font-tech">© 2025 Sandhya Kumari • Designed with <span className="text-primary">Neon</span> & Code</p>

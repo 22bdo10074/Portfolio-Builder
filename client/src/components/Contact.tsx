@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { profile } from "@/lib/data";
-import { Mail, Phone, Linkedin, Github, Send } from "lucide-react";
+import { Mail, Phone, MessageCircle, Linkedin, Github, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Contact() {
@@ -20,7 +20,7 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-12">
+        <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-12">
           {/* Email */}
           <motion.a
             href={`mailto:${profile.email}`}
@@ -45,6 +45,21 @@ export default function Contact() {
             </div>
             <h3 className="font-display font-bold text-lg mb-2">Phone</h3>
             <p className="text-muted-foreground text-sm">{profile.phone}</p>
+          </motion.a>
+
+          {/* WhatsApp */}
+          <motion.a
+            href={`https://wa.me/${profile.phone.replace(/\D/g, '')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ y: -5 }}
+            className="glass-card p-8 rounded-xl text-center hover:border-green-500 transition-all group cursor-pointer"
+          >
+            <div className="bg-green-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500/20 transition-colors">
+              <MessageCircle className="text-green-500 group-hover:scale-110 transition-transform" size={32} />
+            </div>
+            <h3 className="font-display font-bold text-lg mb-2">WhatsApp</h3>
+            <p className="text-muted-foreground text-sm">Message me</p>
           </motion.a>
         </div>
 
