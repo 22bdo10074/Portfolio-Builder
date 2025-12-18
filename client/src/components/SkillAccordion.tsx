@@ -111,7 +111,7 @@ export default function SkillAccordion() {
                             <div key={proj.title} className="bg-black/40 p-4 rounded-lg border border-white/5 hover:border-secondary/50 transition-colors">
                               <div className="flex justify-between items-start mb-2">
                                 <h5 className="font-bold text-lg">{proj.title}</h5>
-                                <ExternalLink size={16} className="text-muted-foreground" "opacity-40 cursor-default" />
+                                
                               </div>
                               <p className="text-sm text-muted-foreground mb-3">{proj.desc}</p>
                               <div className="flex gap-2 flex-wrap">
