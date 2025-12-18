@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
 import { Zap, Target, Rocket, Heart } from "lucide-react";
+const highlights = [
+  
+];
+
 
 
 export default function Highlights() {
