@@ -2,11 +2,11 @@ import { Code2, Cloud, Terminal, Monitor, Server, Cpu, Globe, Layout, Shield, Da
 
 // Import assets to ensure they are bundled and have correct URLs
 import profileImg from "@assets/Professional_img.jpg";
-import Sandhya_DevOps_Engineer from "@assets/Sandhya_DevOps_Engineer.pdf";
-import Sandhya_Cloud_Engineer from "@assets/Sandhya_Cloud_Engineer.pdf";
-import Sandhya_Software_Developer from "@assets/Sandhya_Software_Developer.pdf";
-import Sandhya_Site_Reliability_Engineer from "@assets/Sandhya_Site_Reliability_Engineer.pdf";
-import Sandhya_Frontend_Developer from "@assets/Sandhya_Frontend_Developer.pdf";
+import sde from "@assets/Sandhya_DevOps_Engineer.pdf";
+import sce from "@assets/Sandhya_Cloud_Engineer.pdf";
+import ssde from "@assets/Sandhya_Software_Developer.pdf";
+import ssre from "@assets/Sandhya_Site_Reliability_Engineer.pdf";
+import sfd from "@assets/Sandhya_Frontend_Developer.pdf";
 
 export const profile = {
   name: "Sandhya Kumari",
@@ -36,7 +36,7 @@ export const skillsData = [
       }
     ],
     certs: ["Oracle Cloud Infrastructure 2024 Generative AI Certified Professional"],
-    resumeLink: Sandhya_DevOps_Engineer
+    resumeLink: sde
   },
   {
     id: "cloud",
@@ -45,7 +45,7 @@ export const skillsData = [
     description: "Architecting scalable cloud solutions on AWS & Azure.",
     keySkills: ["AWS (EC2, S3, VPC, RDS, EKS)", "Azure", "Google Cloud Concepts", "Terraform", "CloudFormation", "Ansible", "Configuration Management", "VPC Design", "Subnets", "Security Groups", "IAM Roles", "Load Balancing (ELB/ALB)", "Docker", "Kubernetes", "Jenkins", "CI/CD Pipelines", "Git", "CloudWatch", "Prometheus", "Grafana", "Linux Administration (Ubuntu/RHEL)"],
     certs: ["AWS Cloud Practitioner Essentials", "Oracle Cloud Infrastructure Foundations Associate"],
-    resumeLink: Sandhya_Cloud_Engineer
+    resumeLink: sce
   },
   {
     id: "sde",
@@ -61,7 +61,7 @@ export const skillsData = [
       }
     ],
     certs: ["Oracle Cloud Infrastructure Gen AI Professional"],
-    resumeLink: Sandhya_Software_Developer
+    resumeLink: ssde
   },
   {
     id: "sre",
@@ -69,7 +69,7 @@ export const skillsData = [
     icon: Server,
     description: "Ensuring system reliability, monitoring, and security.",
     keySkills: ["Site Reliability Engineering", "Observability", "Incident Management", "Capacity Planning", "Toil Reduction", "Prometheus", "Grafana", "ELK Stack (Logstash, Kibana)", "CloudWatch", "AlertManager", "AWS (EC2, EKS, S3)", "Terraform (IaC)", "Docker", "Kubernetes", "Ansible", "Python", "Bash/Shell", "Go (Basic)", "Java", "SQL", "Jenkins", "Git/GitHub", "Linux Administration", "Automated Deployment Pipelines"],
-    resumeLink: Sandhya_Site_Reliability_Engineer
+    resumeLink: ssre
   },
   {
     id: "frontend",
@@ -77,7 +77,7 @@ export const skillsData = [
     icon: Layout,
     description: "Crafting responsive and interactive user interfaces.",
     keySkills: ["React.js","Next.js","JavaScript (ES6+)", "HTML5", "CSS3", "TypeScript", "Tailwind CSS", "SCSS/SASS", "Bootstrap", "Flexbox/Grid", "UI/UX Design", "Framer Motion", "Responsive Design", "Redux Toolkit", "Context API", "RESTful API Integration", "JSON", "Axios", "Fetch API", "Git/GitHub", "VS Code", "Chrome DevTools", "Postman", "Figma (Collaboration)", "Jest (Basic)"],
-    resumeLink: Sandhya_Frontend_Developer
+    resumeLink: sfd
   }
 ];
 
