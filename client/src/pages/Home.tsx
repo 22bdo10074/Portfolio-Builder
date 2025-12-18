@@ -1,8 +1,11 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Stats from "@/components/Stats";
 import SkillAccordion from "@/components/SkillAccordion";
 import FlashCards from "@/components/FlashCards";
+import Timeline from "@/components/Timeline";
 import Certifications from "@/components/Certifications";
+import ResearchPapers from "@/components/ResearchPapers";
 import Projects from "@/components/Projects";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
@@ -14,14 +17,21 @@ export default function Home() {
       <div id="hero" className="pt-16">
         <Hero />
       </div>
+      <Stats />
       <div id="skills">
         <SkillAccordion />
       </div>
       <div id="interpersonal">
         <FlashCards />
       </div>
+      <div id="timeline">
+        <Timeline />
+      </div>
       <div id="certifications">
         <Certifications />
+      </div>
+      <div id="research">
+        <ResearchPapers />
       </div>
       <div id="projects">
         <Projects />
