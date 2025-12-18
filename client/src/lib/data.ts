@@ -28,44 +28,32 @@ export const skillsData = [
     title: "DevOps Engineer",
     icon: Terminal,
     description: "Automating pipelines and managing infrastructure.",
-    keySkills: ["Docker", "Kubernetes", "Jenkins", "Terraform", "CI/CD", "GitHub Actions", "Linux/Bash"],
+    keySkills: ["AWS (EC2, S3, EKS, RDS)", "Azure", "CloudFormation", "Docker", "Kubernetes", "Jenkins", "Terraform", "Ansible", "Git/GitHub", "Python", "Bash/Shell Scripting", "Linux Administration (Ubuntu/CentOS)", "Prometheus", "Grafana", "ELK Stack", "CloudWatch"],
     projects: [
       {
         title: "DevOps Quest",
         desc: "A Gamified Learning Platform for Progressive DevOps Education. Implemented Docker, K8s, Jenkins pipelines.",
         tech: ["React", "Firebase", "MongoDB", "Docker", "K8s"]
-      },
-      {
-        title: "Infrastructure Automation",
-        desc: "Automated backend deployments using Docker and Bash scripting, reducing manual intervention by 40%.",
-        tech: ["Bash", "Docker", "AWS"]
       }
     ],
     certs: ["Oracle Cloud Infrastructure 2024 Generative AI Certified Professional"],
-    resumeLink: devopsResume
+    resumeLink: Sandhya_DevOps_Engineer
   },
   {
     id: "cloud",
     title: "Cloud Engineer",
     icon: Cloud,
     description: "Architecting scalable cloud solutions on AWS & Azure.",
-    keySkills: ["AWS (EKS, Lambda, RDS)", "Azure Firewall", "CloudFormation", "Serverless", "Cloud Security"],
-    projects: [
-      {
-        title: "Azure Cloud Services",
-        desc: "Designed distributed application on Azure with Load Balancing to handle high traffic scale.",
-        tech: ["Azure", "Load Balancer", "Distributed Systems"]
-      }
-    ],
+    keySkills: ["AWS (EC2, S3, VPC, RDS, EKS)", "Azure", "Google Cloud Concepts", "Terraform", "CloudFormation", "Ansible", "Configuration Management", "VPC Design", "Subnets", "Security Groups", "IAM Roles", "Load Balancing (ELB/ALB)", "Docker", "Kubernetes", "Jenkins", "CI/CD Pipelines", "Git", "CloudWatch", "Prometheus", "Grafana", "Linux Administration (Ubuntu/RHEL)"],
     certs: ["AWS Cloud Practitioner Essentials", "Oracle Cloud Infrastructure Foundations Associate"],
-    resumeLink: cloudResume
+    resumeLink: Sandhya_Cloud_Engineer
   },
   {
     id: "sde",
     title: "Software Development Engineer",
     icon: Code2,
     description: "Building robust software solutions and D2C platforms.",
-    keySkills: ["React.js", "Next.js", "JavaScript", "Java", "Python", "Data Structures"],
+    keySkills: ["Java", "C++", "Python", "JavaScript (ES6+)", "SQL", "Bash Scripting",  "React.js", "HTML5", "CSS3", "RESTful APIs", "Node.js Concepts", "JSON", "XML", "MySQL", "MongoDB", "Database Design", "Query Optimization", "Git/GitHub", "VS Code", "Docker", "Jenkins", "Linux (Ubuntu)", "AWS Basic Services"],
     projects: [
       {
         title: "FOODISTA",
@@ -74,39 +62,23 @@ export const skillsData = [
       }
     ],
     certs: ["Oracle Cloud Infrastructure Gen AI Professional"],
-    resumeLink: sdeResume
+    resumeLink: Sandhya_Software_Developer
   },
   {
     id: "sre",
     title: "Site Reliability Engineer",
     icon: Server,
     description: "Ensuring system reliability, monitoring, and security.",
-    keySkills: ["Monitoring (Prometheus/Grafana)", "Distributed Systems", "Network Security", "TCP/IP"],
-    projects: [
-      {
-        title: "Reliability Engineering",
-        desc: "Acted as DRI, implementing monitoring/alerting systems to detect degradation.",
-        tech: ["Prometheus", "Grafana", "Azure Monitor"]
-      }
-    ],
-    certs: ["Cisco Python Essentials"],
-    resumeLink: sreResume
+    keySkills: ["Site Reliability Engineering", "Observability", "Incident Management", "Capacity Planning", "Toil Reduction", "Prometheus", "Grafana", "ELK Stack (Logstash, Kibana)", "CloudWatch", "AlertManager", "AWS (EC2, EKS, S3)", "Terraform (IaC)", "Docker", "Kubernetes", "Ansible", "Python", "Bash/Shell", "Go (Basic)", "Java", "SQL", "Jenkins", "Git/GitHub", "Linux Administration", "Automated Deployment Pipelines"],
+    resumeLink: Sandhya_Site_Reliability_Engineer
   },
   {
     id: "frontend",
     title: "Front-end Developer",
     icon: Layout,
     description: "Crafting responsive and interactive user interfaces.",
-    keySkills: ["React.js", "Tailwind CSS", "UI/UX Design", "Framer Motion", "Responsive Design"],
-    projects: [
-      {
-        title: "Portfolio Development",
-        desc: "High-performance interactive portfolio sites with modern animations.",
-        tech: ["React", "Framer Motion", "Vite"]
-      }
-    ],
-    certs: ["Oracle Cloud Infrastructure Gen AI Professional"],
-    resumeLink: frontendResume
+    keySkills: ["React.js","Next.js","JavaScript (ES6+)", "HTML5", "CSS3", "TypeScript", "Tailwind CSS", "SCSS/SASS", "Bootstrap", "Flexbox/Grid", "UI/UX Design", "Framer Motion", "Responsive Design", "Redux Toolkit", "Context API", "RESTful API Integration", "JSON", "Axios", "Fetch API", "Git/GitHub", "VS Code", "Chrome DevTools", "Postman", "Figma (Collaboration)", "Jest (Basic)"],
+    resumeLink: Sandhya_Frontend_Developer
   }
 ];
 
