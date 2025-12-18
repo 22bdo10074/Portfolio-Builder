@@ -1,0 +1,29 @@
+my content is: I want you to design my Portfolio, which I'll deploy on GitHub Pages. I want my resume to be highly interactive (loaded with lots of animations & effects (not a normal boring site). I want to build it for mobile & web both compatible. Also, I want the following flow structure for my Portfolio:->
+
+1. About me (this should be the first scroll) -> here you will include all the intro part about me (it can be any hook line so that the user gets hooked for any resume), also I want my about section that it should have some concept making it obvious that I'm a DevOps Engineer, Cloud Engineer, Software Development Engineer(SDE), Site Reliability Engineer(SRE), Front-end developer. Also you can use any quotation of it relevant to our portfolio.
+
+2. Technical Skills -> first thing should be intro of this section, consisting of all sub-section's skill,projects,certifications) and in this section there should be 5 sub-sections, and all of them should be present in such a way that whenever a particular sub-section is being clicked, it should expand and show its contents of that particular sub-section only, and when user click back the currently opened sub-section should closed. -> make the sub-section opening and closing with full of loaded animations also for each sub-section there should be different animation.
+
+Those 5 sub-sections are :->
+
+a) DevOps Engineer
+
+b) Cloud Engineer
+
+c) Software Development Engineer
+
+d) Site Reliability Engineer
+
+e) Front-end developer
+
+Now in every sub-section these should be there:->
+
+a) Key Skill (only related to that field)
+
+b) Projects ( Featured for that field)
+
+c) Certifications & badges (Selected to that field only)
+
+d) Resume downloadable button (for that particular sub-section)
+
+e) Contact - Phone, Email, Whats app    ......repeat all these for all the sub section   content.      3. Inter-personal skills=flash card type style and when user hover on that the content should be where you have used that particular inter-personal sills in recent times in real life.     4.Education: add education for graduation , intermediate and matriculation .   5. Projects/Academic study/ Research Paper:in this project part 2 part 1 one is intro for all the projects 2 one is sub-sections like project1 (flash card whenever the user hovers on it shows features of projects and type of project).                      6. Coding Profiles: under this section a little dashboard view of all the coding platforms will be shown and by clicking on it.the coding platforms like codechef, leetcode,hackerrank and geeksforgeeks etc. will be shown.                          7.cetificates and badges: link of certificate ,photo of certificate and id of certificates, now for badges required photo and link of that badges.                         8.Resume download button: when user clicked the options should come like want to download resume for cloud eng,devops eng, SDE, SRE and frontend eng.                 9.contacts: phone no -automatically redirects them to their default calling app with my phone number printed on their screen.    now for wahatapp-automatically redirects them to the whatapp app of my profile and there should be written the content like: "Hey Sandhya! I'm impressed with your profile" want to connect with you.       mow for email: it should print with the email icon, on getting clicked it should automatically redirects them in to the email with a default composed email opened up and in the to's section my email id-connect2sandhyaa@gmail.com should be added, in the subject field-this should be written-want to connect with you, and in the body of email this should be entered as a default email. -Hey Sandhya! I'm Impressed with your portfolio. I want to connect with you.         now for linkedin: it should present with the linkedin icon, on getting clicked it should redirect the user to the linkedin platform with my profile opened there.       now for Github:it should present with the lgithub icon, on getting clicked it should redirect the user to the github platform with my profile opened there.    
