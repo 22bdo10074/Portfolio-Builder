@@ -12,6 +12,7 @@ import Timeline from "@/components/Timeline";
 import Certifications from "@/components/Certifications";
 import ResearchPapers from "@/components/ResearchPapers";
 import TechStack from "@/components/TechStack";
+import CodingProfiles from "@/components/CodingProfiles";
 import Projects from "@/components/Projects";
 import Education from "@/components/Education";
 import CTA from "@/components/CTA";
@@ -56,6 +57,10 @@ export default function Home() {
           
           <div id="tech-stack">
             <TechStack />
+          </div>
+          
+          <div id="coding-profiles">
+            <CodingProfiles />
           </div>
           
           <div id="projects">
