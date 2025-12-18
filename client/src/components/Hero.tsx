@@ -70,9 +70,7 @@ export default function Hero() {
           <a href={`mailto:${profile.email}`} className="p-3 rounded-full bg-white/5 hover:bg-primary/20 hover:text-primary transition-all border border-white/10 hover:border-primary">
             <Mail size={24} />
           </a>
-          <a href={profile.resume} target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/5 hover:bg-primary/20 hover:text-primary transition-all border border-white/10 hover:border-primary" title="Main Resume">
-            <FileText size={24} />
-          </a>
+         
         </motion.div>
 
         <motion.div
