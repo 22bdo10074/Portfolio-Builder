@@ -24,7 +24,7 @@ export default function Hero() {
             <img 
               src={profile.image} 
               alt={profile.name} 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </div>
           <div className="absolute -bottom-2 -right-2 bg-secondary text-white px-4 py-1 rounded-full text-sm font-bold font-display tracking-wider border border-white/20 shadow-lg">
