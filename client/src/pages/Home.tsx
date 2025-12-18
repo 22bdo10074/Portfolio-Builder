@@ -1,44 +1,65 @@
 import Navbar from "@/components/Navbar";
+import ScrollTop from "@/components/ScrollTop";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
+import Highlights from "@/components/Highlights";
 import SkillAccordion from "@/components/SkillAccordion";
 import FlashCards from "@/components/FlashCards";
 import Timeline from "@/components/Timeline";
 import Certifications from "@/components/Certifications";
 import ResearchPapers from "@/components/ResearchPapers";
+import TechStack from "@/components/TechStack";
 import Projects from "@/components/Projects";
 import Education from "@/components/Education";
+import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-primary selection:text-black">
       <Navbar />
+      <ScrollTop />
+      
       <div id="hero" className="pt-16">
         <Hero />
       </div>
+      
       <Stats />
+      <Highlights />
+      
       <div id="skills">
         <SkillAccordion />
       </div>
+      
       <div id="interpersonal">
         <FlashCards />
       </div>
+      
       <div id="timeline">
         <Timeline />
       </div>
+      
       <div id="certifications">
         <Certifications />
       </div>
+      
       <div id="research">
         <ResearchPapers />
       </div>
+      
+      <div id="tech-stack">
+        <TechStack />
+      </div>
+      
       <div id="projects">
         <Projects />
       </div>
+      
       <div id="education">
         <Education />
       </div>
+      
+      <CTA />
       <Contact />
       
       <footer className="py-8 text-center text-muted-foreground border-t border-white/5 bg-black/40">
