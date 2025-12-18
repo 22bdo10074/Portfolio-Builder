@@ -53,14 +53,7 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          className="max-w-2xl text-muted-foreground mb-8 text-lg italic border-l-4 border-primary pl-4 bg-white/5 py-4 rounded-r-lg"
-        >
-          "{profile.quote}"
-        </motion.p>
+        
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
