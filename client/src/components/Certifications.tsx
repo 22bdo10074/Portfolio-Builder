@@ -51,33 +51,6 @@ export default function Certifications() {
           Validated expertise from industry-leading platforms
         </p>
 
-        {/* Badges Grid */}
-        <div className="mb-12">
-          <h3 className="text-lg font-tech font-semibold text-secondary mb-6 text-center">Professional Badges</h3>
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
-            {certs.map((cert, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: idx * 0.1 }}
-                whileHover={{ scale: 1.1, y: -5 }}
-                className="group cursor-pointer"
-              >
-                <div className="text-center">
-                  <div className="relative w-24 h-24 mx-auto mb-2 flex items-center justify-center bg-gradient-to-br from-secondary/20 to-primary/20 rounded-full border-2 border-secondary/50 group-hover:border-secondary transition-all p-2 shadow-lg group-hover:shadow-secondary/50">
-                    <span className="text-4xl group-hover:scale-110 transition-transform">{cert.icon}</span>
-                  </div>
-                  <Badge variant="secondary" className="text-xs bg-secondary/20 text-secondary border-secondary/50">
-                    {cert.issuer}
-                  </Badge>
-                  <p className="text-xs text-muted-foreground mt-1 max-w-[120px]">{cert.date}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
         {/* Detailed Certificates */}
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {certs.map((cert, idx) => (
