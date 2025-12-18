@@ -1,12 +1,25 @@
-import { Code2, Cloud, Terminal, Monitor, Server, Cpu, Globe, Layout, Shield, Database, Users, Lightbulb, Puzzle, Clock, MessageSquare, RefreshCw } from "lucide-react";
+import {
+  Code2,
+  Cloud,
+  Terminal,
+  Server,
+  Layout,
+  Users,
+  Lightbulb,
+  Puzzle,
+  Clock,
+  MessageSquare,
+  RefreshCw
+} from "lucide-react";
 
-// Import assets to ensure they are bundled and have correct URLs
-import profileImg from "@assets/Professional_img.jpg";
-import sde from "@assets/Sandhya_DevOps_Engineer.pdf";
-import sce from "@assets/Sandhya_Cloud_Engineer.pdf";
-import ssde from "@assets/Sandhya_Software_Developer.pdf";
-import ssre from "@assets/Sandhya_Site_Reliability_Engineer.pdf";
-import sfd from "@assets/Sandhya_Frontend_Developer.pdf";
+/* ✅ Define constants properly */
+const profileImg = "/images/Professional_img.jpg";
+
+const sde = "/resumes/Sandhya_DevOps_Engineer.pdf";
+const sce = "/resumes/Sandhya_Cloud_Engineer.pdf";
+const ssde = "/resumes/Sandhya_Software_Developer.pdf";
+const ssre = "/resumes/Sandhya_Site_Reliability_Engineer.pdf";
+const sfd = "/resumes/Sandhya_Frontend_Developer.pdf";
 
 export const profile = {
   name: "Sandhya Kumari",
@@ -17,7 +30,8 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/sandhya-53949825a/",
   github: "https://github.com/22bdo10074",
   image: profileImg,
-  about: "I'm a passionate DevOps Engineer, Cloud Engineer, SDE, SRE, and Front-end developer. I build scalable systems and beautiful interfaces.",
+  about:
+    "I'm a passionate DevOps Engineer, Cloud Engineer, SDE, SRE, and Front-end developer. I build scalable systems and beautiful interfaces.",
   quote: "Turning coffee into code and chaos into reliable infrastructure."
 };
 
