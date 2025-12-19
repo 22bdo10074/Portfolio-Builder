@@ -61,7 +61,7 @@ export default function Projects() {
               <div className="p-6">
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-2xl font-bold font-display group-hover:text-primary transition-colors">{project.title}</h3>
-                  <ExternalLink size={20} className="text-muted-foreground group-hover:text-white transition-colors cursor-pointer" />
+                  
                 </div>
                 <p className="text-sm font-tech text-secondary mb-4">{project.role}</p>
                 <p className="text-muted-foreground mb-6 line-clamp-3">
