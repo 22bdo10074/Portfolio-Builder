@@ -46,7 +46,7 @@ export default function Projects() {
               whileHover={{ y: -10 }}
               className="glass-card rounded-xl overflow-hidden group border-t border-white/10"
             >
-              <div className="h-64 overflow-hidden relative">
+              <div className="h-84 overflow-hidden relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
                 <img 
                   src={project.image} 
